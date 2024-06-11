@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner img, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:img" content="static/img/your_banner_img.png" />
+  <meta property="og:img:width" content="1200"/>
+  <meta property="og:img:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner img, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:img" content="static/imgs/your_twitter_banner_img.png">
+  <meta name="twitter:card" content="summary_large_img">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>FlowAVSE</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="xtitle is-1 publication-title" style="font-size: 31px;"><strong>FlowAVSE</strong></h1><br> -->
+            <h1 class="xtitle is-1 publication-title" style="font-size: 45px;">FlowAVSE: Efficient audio visual speech enhancement models with conditional flow matching</h1>
+            <div class="is-size-5 publication-authors">
+            </div>
+            <br>
+            <!-- Institution & Conference -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="font-size: 20px;">Anonymous<sup>*</sup></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="font-size: 24px;">Under review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light" style='background-color: white'>
+  <div class="container is-max-desktop" >
+    <div class="columns is-centered has-text-centered" >
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This work proposes an efficient method to enhance the quality of corrupted speech signals by leveraging both acoustic and visual cues. 
+            While existing diffusion-based approaches have demonstrated remarkable quality, their applicability is limited by slow inference speeds and computational complexity. 
+	    To address this issue, we present FlowAVSE which enhances the inference speed and reduces the number of learnable parameters without degrading the output quality. 
+	    In particular, we employ a conditional flow matching algorithm that enables the generation of high-quality speech in a single sampling step. 
+	    Moreover, we increase efficiency by optimizing the underlying U-net architecture of diffusion-based systems. 
+	    Our experiments demonstrate that FlowAVSE achieves 22 times faster inference speed and reduces the model size by half while maintaining the output quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Demo Audio -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Demo Audio</h2>
+        <p>
+          Below audio samples are the comparison of enhanced outputs obtained by using the same input for the four models: FlowAVSE(ours), AVDiffuSS [1], and AV-Gen [2].It seems all audio is enhancing mix speech well. However, our model is good at denoising noises and detecting the target speech for whole time. <br><br>
+        </p>
+        <table style="width:100%; text-align:center">
+        <thead>
+          <tr>
+            <th width="18%" style="vertical-align:middle"><center>Mix audio</center></th>
+            <th width="18%" style="vertical-align:middle"><center>Ground Truth</center></th>
+            <th width="18%" style="vertical-align:middle"><center>FlowAVSE(Ours)</center></th>
+            <th width="18%" style="vertical-align:middle"><center>AVDiffuSS [1]</center></th>
+            <th width="18%" style="vertical-align:middle"><center>AV-Gen [2]</center></th>
+          </tr>
+        </thead>
+        <tbody>
+	  <tr>
+            <td><img src="F9J5pCz3Ij4/flow_mix_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="F9J5pCz3Ij4/flow_gt_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="F9J5pCz3Ij4/flow_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="F9J5pCz3Ij4/storm_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="F9J5pCz3Ij4/0.png" alt=" " width="150" height="150"></td>
+          </tr>
+          <tr>
+            <td><audio controls=""><source src="F9J5pCz3Ij4/flow_mix_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="F9J5pCz3Ij4/flow_gt_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="F9J5pCz3Ij4/flow_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="F9J5pCz3Ij4/avdiffuss_real_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="F9J5pCz3Ij4/avgen2.wav" type="audio/wav"></source></audio></td>
+          </tr>
+	  <tr>
+            <td><img src="Kcj8ocOFBc0/flow_mix_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="Kcj8ocOFBc0/flow_gt_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="Kcj8ocOFBc0/flow_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="Kcj8ocOFBc0/storm_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="Kcj8ocOFBc0/2.png" alt=" " width="150" height="150"></td>
+          </tr>
+          <tr>
+	    <td><audio controls=""><source src="Kcj8ocOFBc0/flow_mix_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="Kcj8ocOFBc0/flow_gt_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="Kcj8ocOFBc0/flow_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="Kcj8ocOFBc0/avdiffuss_real_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="Kcj8ocOFBc0/avgen2.wav" type="audio/wav"></source></audio></td>
+          </tr>
+	  <tr>
+            <td><img src="NLElzEJPceA/flow_mix_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="NLElzEJPceA/flow_gt_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="NLElzEJPceA/flow_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="NLElzEJPceA/storm_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="NLElzEJPceA/3.png" alt=" " width="150" height="150"></td>
+          </tr>
+          <tr>
+            <td><audio controls=""><source src="NLElzEJPceA/flow_mix_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="NLElzEJPceA/flow_gt_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="NLElzEJPceA/flow_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="NLElzEJPceA/avdiffuss_real_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="NLElzEJPceA/avgen2.wav" type="audio/wav"></source></audio></td>
+          </tr>
+	  <tr>
+            <td><img src="Uvu5KU0J0gg/flow_mix_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="Uvu5KU0J0gg/flow_gt_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="Uvu5KU0J0gg/flow_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="Uvu5KU0J0gg/storm_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="Uvu5KU0J0gg/4.png" alt=" " width="150" height="150"></td>
+          </tr>
+	  <tr>
+            <td><audio controls=""><source src="Uvu5KU0J0gg/flow_mix_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="Uvu5KU0J0gg/flow_gt_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="Uvu5KU0J0gg/flow_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="Uvu5KU0J0gg/avdiffuss_real_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="Uvu5KU0J0gg/avgen2.wav" type="audio/wav"></source></audio></td>
+          </tr> 
+	  <tr>
+            <td><img src="fqkzzzr6fN4/flow_mix_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="fqkzzzr6fN4/flow_gt_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="fqkzzzr6fN4/flow_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="fqkzzzr6fN4/storm_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="fqkzzzr6fN4/5.png" alt=" " width="150" height="150"></td>
+          </tr>
+	  <tr>
+            <td><audio controls=""><source src="fqkzzzr6fN4/flow_mix_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="fqkzzzr6fN4/flow_gt_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="fqkzzzr6fN4/flow_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="fqkzzzr6fN4/avdiffuss_real_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="fqkzzzr6fN4/avgen_norm.wav" type="audio/wav"></source></audio></td>
+          </tr> 
+	  <tr>
+            <td><img src="lPAfrdiEHSQ/flow_mix_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="lPAfrdiEHSQ/flow_gt_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="lPAfrdiEHSQ/flow_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="lPAfrdiEHSQ/storm_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="lPAfrdiEHSQ/6.png" alt=" " width="150" height="150"></td>
+          </tr>
+	  <tr>
+            <td><audio controls=""><source src="lPAfrdiEHSQ/flow_mix_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="lPAfrdiEHSQ/flow_gt_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="lPAfrdiEHSQ/flow_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="lPAfrdiEHSQ/avdiffuss_real_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="lPAfrdiEHSQ/avgen_norm.wav" type="audio/wav"></source></audio></td>
+          </tr> 
+	  <tr>
+            <td><img src="ynUjo99Gzbk/flow_mix_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="ynUjo99Gzbk/flow_gt_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="ynUjo99Gzbk/flow_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="ynUjo99Gzbk/storm_2.png" alt=" " width="150" height="150"></td>
+            <td><img src="ynUjo99Gzbk/7.png" alt=" " width="150" height="150"></td>
+          </tr>
+	  <tr>
+            <td><audio controls=""><source src="ynUjo99Gzbk/flow_mix_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="ynUjo99Gzbk/flow_gt_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="ynUjo99Gzbk/flow_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="ynUjo99Gzbk/avdiffuss_real_2.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="ynUjo99Gzbk/avgen_norm.wav" type="audio/wav"></source></audio></td>
+          </tr>
+	  <tr>
+            <td><img src="FwqVBPheQ70/flow_mix_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="FwqVBPheQ70/flow_gt_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="FwqVBPheQ70/flow_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="FwqVBPheQ70/storm_1.png" alt=" " width="150" height="150"></td>
+            <td><img src="FwqVBPheQ70/1.png" alt=" " width="150" height="150"></td>
+          </tr>
+          <tr>
+	    <td><audio controls=""><source src="FwqVBPheQ70/flow_mix_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="FwqVBPheQ70/flow_gt_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="FwqVBPheQ70/flow_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="FwqVBPheQ70/avdiffuss_real_1.wav" type="audio/wav"></source></audio></td>
+            <td><audio controls=""><source src="FwqVBPheQ70/avgen2.wav" type="audio/wav"></source></audio></td>
+          </tr>
+        </tbody>
+        
+         
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Demo Audio -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">References</h2>
+        <div class="content has-text-justified">
+          <p>
+            [1] Lee, S., Jung, C., Jang, Y., Kim, J. and Chung, J.S., Seeing Through the Conversation: Audio-Visual Speech Separation based on Diffusion Model. ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2024.
+          </p>
+          <p>
+            [2] Richter, J., Frintrop, S. and Gerkmann, T., Audio-Visual Speech Enhancement with Score-Based Generative Models. ITG Speech Communication, Aachen, Germany, Sep. 2023.
+          </p>
+	</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+                
